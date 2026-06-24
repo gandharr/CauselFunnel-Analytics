@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://gandharr.github.io/CauselFunnel-Analystics",
+  "homepage": "https://gandharr.github.io/CauselFunnel-Analytics",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gandharr/CauselFunnel-Analystics.git"
+    "url": "git+https://github.com/gandharr/CauselFunnel-Analytics.git"
   },
   "scripts": {
     "dev": "tsx server.ts",
