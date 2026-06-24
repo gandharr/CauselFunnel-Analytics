@@ -1,0 +1,6 @@
+{
+  "name": "CausalFunnel Analytics",
+  "description": "A simple full-stack user analytics dashboard tracking page views, clicks, user journeys, sessions, and click heatmaps.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
