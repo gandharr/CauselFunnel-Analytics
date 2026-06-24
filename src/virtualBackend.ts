@@ -8,6 +8,7 @@ function getSeedEvents(): TrackedEvent[] {
   const now = Date.now();
   const sampleEvents: TrackedEvent[] = [];
 
+  // ⚠️ DEMO DATA - These are sample events for testing. Clear them to see only real tracking data.
   // Session 1: Alpha user (Purchasing flow)
   const s1Start = now - 1000 * 60 * 45; // 45 mins ago
   sampleEvents.push({
@@ -23,6 +24,7 @@ function getSeedEvents(): TrackedEvent[] {
     browserName: 'Chrome',
     country: 'United States',
     city: 'San Francisco',
+    isDemo: true, // Mark as demo data
   });
 
   sampleEvents.push({
@@ -280,9 +282,10 @@ export function getEventsFromStorage(): TrackedEvent[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) {
-      const seeded = getSeedEvents();
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(seeded));
-      return seeded;
+      // Start with empty events on GitHub Pages - only track real clicks, not demo data
+      // Users can click "Load Demo" button if they want to see sample data
+      localStorage.setItem(STORAGE_KEY, JSON.stringify([]));
+      return [];
     }
     return JSON.parse(raw);
   } catch (e) {

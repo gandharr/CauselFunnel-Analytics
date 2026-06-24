@@ -23,6 +23,8 @@ export interface TrackedEvent {
   browserName?: string; // Chrome, Safari, Firefox, Edge, etc.
   country?: string;
   city?: string;
+  // Demo flag
+  isDemo?: boolean; // True for seed/demo data, undefined/false for real tracking
 }
 
 export interface SessionSummary {
